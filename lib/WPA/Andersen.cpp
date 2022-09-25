@@ -141,13 +141,13 @@ void AndersenBase::analyze()
         SVFUtil::stopAnalysisLimitTimer(limitTimerSet);
 
         DBOUT(DGENERAL, outs() << SVFUtil::pasMsg("Finish Solving Constraints\n"));
+        if (!Options::WriteAnder.empty())
+            this->writeToFile(Options::WriteAnder);
 
         // Finalize the analysis
         finalize();
     }
 
-    if (!Options::WriteAnder.empty())
-        this->writeToFile(Options::WriteAnder);
 }
 
 void AndersenBase::cleanConsCG(NodeID id)

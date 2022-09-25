@@ -4,7 +4,7 @@
 # if the LLVM_DIR variable is not set, LLVM will be downloaded.
 #
 # Dependencies include: build-essential libncurses5 libncurses-dev cmake zlib1g-dev
-set -e # exit on first error
+#set -e # exit on first error
 
 jobs=4
 

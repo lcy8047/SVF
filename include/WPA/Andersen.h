@@ -391,6 +391,7 @@ public:
         if(diffWave==nullptr)
         {
             diffWave = new AndersenWaveDiff(_pag, AndersenWaveDiff_WPA, false);
+            diffWave->disablePrintStat();
             diffWave->analyze();
             return diffWave;
         }
